@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.servicecreator">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <!-- Define a custom permission that requires signature-level protection -->
+    <permission
+        android:name="com.example.servicecreator.CUSTOM_PERMISSION"
+        android:protectionLevel="signature"/>
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.ServiceCreator">
+
+        <!-- Declare MainActivity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Declare WifiService -->
+        <service
+            android:name=".WifiService"
+            android:exported="true"
+            android:permission="com.example.servicecreator.CUSTOM_PERMISSION">
+            <intent-filter>
+                <action android:name="com.example.servicecreator.WIFI_SERVICE"/>
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>
