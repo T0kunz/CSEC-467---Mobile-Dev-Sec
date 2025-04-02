@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text to encrypt"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/encryptBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt Data"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/ceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access CE Data"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/deBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access DE Data"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/extBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access External Data"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>
